@@ -43,3 +43,8 @@ section{
 .references{
     list-style-type: none;
 }
+input[type=file] {
+    display: block;
+    margin: auto;
+    background-color: #9a0000;
+}

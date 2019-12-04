@@ -8,8 +8,11 @@ router.get('/',function(req,res){
     //__dirname : It will resolve to your project folder.
   });
 router.get('/day-1',function(req,res){
-res.sendFile(path.join(__dirname+'/public/pages/day-1.html'));
+    res.sendFile(path.join(__dirname+'/public/pages/day-1.html'));
 
+});
+router.get('/day-2',function(req,res){
+    res.sendFile(path.join(__dirname+'/public/pages/day-2.html'));
 });
 
 //add the router
