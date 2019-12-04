@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>Day 2</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/assets/css/util.css" tyle="text/css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <section class="row">
+            <article>
+                <h1>Advent of Code</h1>
+                <h2>Rebekah Davies</h2>
+                <a class="btn" href="/">Back Home</a>
+            </article>
+            </section>
+            <section class="row header">
+                <article>
+                    <h1>Day 2: 1202 Program Alarm</h1>
+                </article>
+                <article>
+                    <article class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                        <button class="btn btn-advent" onclick="showPuzzle()">Puzzle</button>
+                    </article>
+                    <article class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                            <button class="btn btn-advent" onclick="showSolution()">Solution</button>
+                        </article>
+                </article>
+            </section>
+            <section id="puzzle" style="display:block">
+                <p>On the way to your gravity assist around the Moon, your ship computer beeps angrily about a "1202 program alarm". On the radio, an Elf is already explaining how to handle the situation: "Don't worry, that's perfectly norma--" The ship computer bursts into flames. </p>
+
+                <p>You notify the Elves that the computer's magic smoke seems to have escaped. "That computer ran Intcode programs like the gravity assist program it was working on; surely there are enough spare parts up there to build a new Intcode computer!"</p>
+                
+                <p>An Intcode program is a list of integers separated by commas (like 1,0,0,3,99). To run one, start by looking at the first integer (called position 0). Here, you will find an opcode - either 1, 2, or 99. The opcode indicates what to do; for example, 99 means that the program is finished and should immediately halt. Encountering an unknown opcode means something went wrong.   </p>
+                        
+                <p>Opcode 1 adds together numbers read from two positions and stores the result in a third position. The three integers immediately after the opcode tell you these three positions - the first two indicate the positions from which you should read the input values, and the third indicates the position at which the output should be stored.
+                
+                For example, if your Intcode computer encounters 1,10,20,30, it should read the values at positions 10 and 20, add those values, and then overwrite the value at position 30 with their sum.</p>
+
+                <p>Opcode 2 works exactly like opcode 1, except it multiplies the two inputs instead of adding them. Again, the three integers after the opcode indicate where the inputs and outputs are, not their values.
+
+                        Once you're done processing an opcode, move to the next one by stepping forward 4 positions.</p>
+            </section>
+            <section id="solution" style="display:none">
+                <p>The input file should be a text file containing a list of integers separated by commas (like 1,0,0,3,99). To run one, start by looking at the first integer (called position 0). Here, you will find an opcode - either 1, 2, or 99. The opcode indicates what to do; for example, 99 means that the program is finished and should immediately halt. Encountering an unknown opcode means something went wrong. </p>
+                <p>Input file available here: <a href="https://adventofcode.com/2019/day/2/input">https://adventofcode.com/2019/day/2/input</a></p>
+                <p>Opcode 1 adds together numbers read from two positions and stores the result in a third position.</p>
+                <p>Opcode 2 works exactly like opcode 1, except it multiplies the two inputs instead of adding them.</p>
+                <p>For example, if your Intcode computer encounters 1,10,20,30, it should read the values at positions 10 and 20, add those values, and then overwrite the value at position 30 with their sum.</p>
+                <article class="panel">
+                
+                <hr width="80%" />
+                <label for="file-input">Choose File</label>
+
+                    <!-- accept a text file -->
+                    <input type="file" id="fileInput">
+                    <h2>Fuel Required: <span id="answer"></span></h2>
+                    <hr width="80%" />
+                </article>
+                <article>
+                        <h1>References</h1>
+                        <p>Some of the sites i used as reference to solve this puzzle: </p>
+                        <ul class="references">
+                            <li><b>Reading text files: </b><a href="https://50linesofco.de/post/2019-07-05-reading-local-files-with-javascript">https://50linesofco.de/post/2019-07-05-reading-local-files-with-javascript</a></li>
+                            <li><b>Read file line by line: </b> <a href="https://stackoverflow.com/questions/23331546/how-to-use-javascript-to-read-local-text-file-and-read-line-by-line">https://stackoverflow.com/questions/23331546/how-to-use-javascript-to-read-local-text-file-and-read-line-by-line</a></li>
+                            
+                        </ul>
+                    </article>
+            </section>
+            <script src="/assets/scripts/day-2.js"></script>
+    </body>
+</html>

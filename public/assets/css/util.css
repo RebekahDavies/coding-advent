@@ -1,0 +1,45 @@
+body{
+    text-align:center;
+}
+
+.header{
+    background-color: #FF9233;
+    color:#fff;
+}
+.header > h2{
+    color: #EAEAEA;
+}
+.door{
+    background-color:rgb(208, 16, 51);
+    color:#fff;
+    border-radius:20px;
+    padding: 2rem;
+    margin:1rem;
+}
+.btn{
+    width:10rem;
+    height: 5rem;
+    background-color: rgb(181, 14, 45);
+    color: #fff;
+    border-radius: 10px;
+}
+.btn-advent{
+    background-color: #fff;
+    color: #E93F01;
+    border-radius: 10px;
+    width: 15rem;
+    height: 5rem;
+}
+section{
+    padding:2rem;
+    margin: 2rem;
+}
+.panel{
+    background-color: rgb(208, 16, 51);
+    color:#fff;
+    width:100%;
+    padding:2rem;
+}
+.references{
+    list-style-type: none;
+}
