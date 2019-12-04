@@ -103,6 +103,10 @@ function findPart2(expected) {
     for (let noun = 0; noun < 100; noun++) {
       for (let verb = 0; verb < 100; verb++) {
         computer = [...comupterClone];
+        o = 0;
+        x = 1;
+        y = 2;
+        z = 3;
         const result = compute(noun, verb);
         console.log(result);
         if (result === expected) {
