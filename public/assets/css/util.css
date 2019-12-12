@@ -48,3 +48,6 @@ input[type=file] {
     margin: auto;
     background-color: #9a0000;
 }
+#error{
+    color:#fff;
+}

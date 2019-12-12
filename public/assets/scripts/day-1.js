@@ -17,8 +17,8 @@ function showSolution(){
 //on input change, read items in file
 document.getElementById('fileInput').addEventListener('change', function selectedFileChanged() {
 	if (this.files.length === 0) {
-	  console.log('No file selected.');
-	  return;
+		console.log('No file selected.');
+		return;
 	}
 	const file = this.files[0];
     const reader = new FileReader();
@@ -35,7 +35,7 @@ document.getElementById('fileInput').addEventListener('change', function selecte
 		});
 		if(modules.length > 0){
 			modules.forEach(function(mod){
-				total = total + fuelRequired(mod);
+				total = total + fuelRequiredModule(mod);
 
 			});
 			document.getElementById("answer").innerHTML = total;
@@ -69,10 +69,10 @@ function fuelRequiredModule(modMass){
 			modFuel =  modFuel + additionalFuel;
 			//calculate teh additonal fuel for that fuel
 			additionalFuel = fuelRequired(additionalFuel);
-		};
+		}
 		return modFuel;
-	};
-};
+	}
+}
 
 //for each module, divide by three, round down, and subtract 2.
 function fuelRequired(mass){

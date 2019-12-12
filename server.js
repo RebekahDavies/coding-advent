@@ -14,6 +14,9 @@ router.get('/day-1',function(req,res){
 router.get('/day-2',function(req,res){
     res.sendFile(path.join(__dirname+'/public/pages/day-2.html'));
 });
+router.get('/day-4', function(req, res){
+    res.sendFile(path.join(__dirname+'/public/pages/day-4.html'))
+})
 
 //add the router
 app.use(express.static(__dirname + '/public'));

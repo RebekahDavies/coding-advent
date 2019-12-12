@@ -9,11 +9,13 @@ let y = 2;
 let z = 3;
 
 //Show puzzle or solution
+// eslint-disable-next-line no-unused-vars
 function showPuzzle(){
 	document.getElementById('puzzle').style.display = "block";
 	document.getElementById('solution').style.display = "none";
 }
 
+// eslint-disable-next-line no-unused-vars
 function showSolution(){
 	document.getElementById('puzzle').style.display = "none";
 	document.getElementById('solution').style.display = "block";
@@ -21,18 +23,19 @@ function showSolution(){
 
 //on input change, read items in file
 document.getElementById('fileInput').addEventListener('change', function selectedFileChanged() {
-	if (this.files.length === 0) {
-	  console.log('No file selected.');
-	  return;
+    if (this.files.length === 0) {
+        return;
 	}
 	const file = this.files[0];
     const reader = new FileReader();
 
     reader.onload = (event) => {
         const file = event.target.result;
+        //split at comma
         const allLines = file.split(/[,]/);
         // Reading line by line
         allLines.forEach((line) => {
+            //test line can be parsed as int
 			if(reg_num.test(line)){
                 computer.push(parseInt(line));
                 comupterClone.push(parseInt(line));
@@ -98,7 +101,7 @@ function stepForward(){
     x = x + 4;
     y = y + 4;
     z = z + 4; 
-};
+}
 function findPart2(expected) {
     for (let noun = 0; noun < 100; noun++) {
       for (let verb = 0; verb < 100; verb++) {
